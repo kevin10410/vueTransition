@@ -1,7 +1,6 @@
 <template>
   <div class="propertyItem">
-      <p class="title">Mode Property</p>
-      <p>To Specify the Order of Transition</p>
+      <p class="title">To Specify the Order of Transition</p>
       <div class="modes">
           <p>No mode ( In &amp Out transition at the same time => Visual Bug )</p>
           <button class="btn btn-danger" @click="noMode = !noMode">Switch</button>

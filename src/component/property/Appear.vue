@@ -1,26 +1,27 @@
 <template>
   <div class="propertyItem">
-      <p class="title">Appear Property</p>
-      <p> Transition or Not In the Beginning</p>
+      <p class="title">Transition or Not In the Beginning</p>
       <div class="appear">
           <p>No Appear ( No transition in th Beginning )</p>
+          <button class="btn btn-info" @click="noAppear = !noAppear">{{noAppearSwitch}}</button>
           <transition 
             enter-class=""
             enter-active-class="animated rollIn"
             leave-class=""
             leave-active-class="animated rollOut">
-            <p class="trans" :style="{color:'red'}">NoAppear</p>
+            <p v-if="noAppear" class="trans" :style="{color:'red'}">NoAppear</p>
           </transition>
       </div>
       <div class="appear">
           <p>With Appear ( Do transition in th Beginning )</p>
+          <button class="btn btn-info" @click="appear = !appear">{{appearSwitch}}</button>
           <transition
             appear
             enter-class=""
             enter-active-class="animated rollIn"
             leave-class=""
             leave-active-class="animated rollOut">
-              <p class="trans" :style="{color:'blue'}">Appear</p>
+              <p v-if="appear" class="trans" :style="{color:'blue'}">Appear</p>
           </transition>
       </div>  
   </div>
@@ -28,7 +29,28 @@
 
 <script>
 export default {
-    
+    data() {
+      return {
+        noAppear:true,
+        appear:true,
+      }
+    },
+    computed: {
+      noAppearSwitch() {
+        if (this.noAppear === true) {
+          return 'Off'
+        } else {
+          return 'On'
+        }
+      },
+      appearSwitch() {
+        if (this.appear === true) {
+          return 'Off'
+        } else {
+          return 'On'
+        }
+      }
+    }
 };
 </script>
 
@@ -50,6 +72,7 @@ export default {
   border: 1px solid #ccc;
   margin-bottom: 10px;
   border-radius: 5px;
+  height: 140px;
 }
 
 .appear p {

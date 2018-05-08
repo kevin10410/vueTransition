@@ -1,7 +1,6 @@
 <template>
   <div class="propertyItem">
-      <p class="title">Name Property</p>
-      <p>To Specify the Processing Transition</p>
+      <p class="title">To Specify the Processing Transition</p>
       <div class="box">
         <p>a. W/O Name (v-class)</p>
         <button class="btn btn-success" @click="changeWO">Change</button>

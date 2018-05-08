@@ -39,7 +39,7 @@ export default {
     }
 
     .code{
-        background: black;
+        background: #343a40;
         color: white;
         font-size: 1.2rem;
         border-radius: 5px; 

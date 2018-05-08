@@ -67,8 +67,8 @@ export default {
 }
 
 .propertyList li.active {
-  border: 1px solid #2c3e50;  
-  background: #2c3e50;
+  border: 1px solid #6c757d;  
+  background: #6c757d;
   color: white;
 }
 
