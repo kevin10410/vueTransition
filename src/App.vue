@@ -36,6 +36,7 @@ export default {
   color: #2c3e50;
   margin-top: 20px;
   min-width: 700px;
+  overflow: hidden;
 }
 
 .btn-default{
