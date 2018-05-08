@@ -3,14 +3,14 @@
       <h3>Transition Property</h3>
       <a target="_blank" href="https://vuejs.org/v2/guide/transitions.html">Vuejs.org - Transition</a>
       <ul class="propertyList">
-          <li class="propertyItem" @click="selectPage('app-use')">How to use</li>
-          <li class="propertyItem" @click="selectPage('app-class')">Transition class</li>
-          <li class="propertyItem" @click="selectPage('app-name')">Transition name</li>
-          <li class="propertyItem" @click="selectPage('app-mode')">Transition mode</li>
-          <li class="propertyItem" @click="selectPage('app-appear')">Transition appear</li>
+          <router-link tag="li" class="propertyItem" active-class="active" to="/property/use">How to use</router-link>
+          <router-link tag="li" class="propertyItem" active-class="active" to="/property/class">Transition class</router-link>
+          <router-link tag="li" class="propertyItem" active-class="active" to="/property/name">Transition name</router-link>
+          <router-link tag="li" class="propertyItem" active-class="active" to="/property/mode">Transition mode</router-link>
+          <router-link tag="li" class="propertyItem" active-class="active" to="/property/appear">Transition appear</router-link>
       </ul>
       <transition name="propertyDetail" mode="out-in">
-          <component :is="page"></component>
+          <router-view></router-view>
       </transition>
   </div>
 </template>
@@ -64,6 +64,12 @@ export default {
   margin: 0 5px;
   padding: 2.5px 5px; 
   cursor: pointer;
+}
+
+.propertyList li.active {
+  border: 1px solid #2c3e50;  
+  background: #2c3e50;
+  color: white;
 }
 
 .propertyDetail-enter {
