@@ -13,7 +13,7 @@
       <div class="box">
         <p>b. W/ Name (name-class)</p>
         <button class="btn btn-success" @click="changeWith">Change</button>
-        <transition name="fade" mode="out-in">
+        <transition name="change" mode="out-in">
           <component :is="withTran"></component>
         </transition>
       </div>
@@ -71,22 +71,22 @@ export default {
   margin: 0;
 }
 
-.fade-enter {
+.change-enter {
     color: #f5f5f5;
     background-color: #2c3e50;
 }
 
-.fade-enter-active {
+.change-enter-active {
     transition: color 0.5s linear, background-color 0.5s linear;
 }
 
-.fade-leave-active {
+.change-leave-active {
     color: #f5f5f5;
     background-color: #2c3e50;
     transition: color 0.5s linear, background-color 0.5s linear;
 }
 
-.fade-leave {
+.change-leave {
 
 }
 

@@ -77,4 +77,23 @@ export default {
 .box p {
   margin-bottom: 10px;
 }
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.fade-enter-active {
+  transition: opacity 0.5s linear, transform 0.5s linear;
+}
+
+.fade-leave {
+  transform: translateX(0%);
+}
+
+.fade-leave-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: opacity 0.5s linear, transform 0.5s linear;
+}
 </style>

@@ -13,5 +13,6 @@ p {
   background: #f5f5f5;
   line-height: 50px;
   border-radius: 5px;
+  transform: translateX(0%);
 }
 </style>
