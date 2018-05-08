@@ -5,7 +5,8 @@ import TransitionGroup from '../component/TransitionGroup.vue'
 
 
 export const routes = [
-    { path:'', component:Home },
+    { path:'*', redirect:'/home' },
+    { path:'/home', component:Home },
     { path:'/property', component:Property },
     { path:'/application', component:Application },
     { path:'/group', component:TransitionGroup },
